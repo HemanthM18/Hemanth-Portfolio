@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hemanth M | Software Developer Portfolio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#0b1c30",
+                    "tertiary-container": "#a44100",
+                    "surface-container": "#e5eeff",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "inverse-primary": "#c3c0ff",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-container": "#006f66",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#777587",
+                    "outline-variant": "#c7c4d8",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#ffd2be",
+                    "secondary-fixed-dim": "#6bd8cb",
+                    "on-surface-variant": "#464555",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#dad7ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-surface": "#213145",
+                    "tertiary": "#7e3000",
+                    "on-primary-fixed": "#0f0069",
+                    "primary": "#3525cd",
+                    "surface-container-high": "#dce9ff",
+                    "surface": "#f8f9ff",
+                    "on-secondary-fixed-variant": "#005049",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "on-secondary-fixed": "#00201d",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "primary-container": "#4f46e5",
+                    "surface-tint": "#4d44e3",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#89f5e7",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#e2dfff",
+                    "on-tertiary-fixed": "#351000",
+                    "secondary-container": "#86f2e4",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed": "#ffdbcc",
+                    "secondary": "#006a61",
+                    "background": "#f8f9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "xl": "48px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "sm": "8px",
+                    "margin-mobile": "16px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .ambient-shadow {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #E2E8F0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface z-50 shadow-sm border-b border-outline-variant">
+<nav class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<a href="#top"
+   class="text-headline-lg font-headline-lg text-primary">
+    Hemanth M
+</a>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#education">Education</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#skills">Skills</a>
+</div>
+<div class="flex items-center gap-md">
+    <a href="https://drive.google.com/file/d/1RJXqO30142xENkP13is_ifdaEriIQT3w/view?usp=sharing"
+   target="_blank"
+   class="hidden md:flex px-md py-sm rounded-lg border border-secondary text-secondary font-semibold hover:bg-secondary-container transition-all cursor-pointer active:scale-95">
+    Resume
+</a>
+<a href="https://www.linkedin.com/in/mhemanth-m/"
+   target="_blank"
+   class="px-md py-sm rounded-lg bg-primary text-white font-semibold shadow-md hover:bg-primary-container transition-all cursor-pointer active:scale-95">
+    Connect
+</a>
+</div>
+</nav>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-surface-bright">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-secondary rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-xl">
+<div class="max-w-2xl text-center md:text-left">
+<div class="inline-flex items-center gap-sm px-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-md">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                        Available for Jobs & Internships
+                    </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md">
+                        Aspiring Software Developer | <span class="text-primary">Building the Future</span> of Web Apps
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                        I'm Hemanth M, a passionate Software Developer with experience in full-stack development and AI-powered applications. I work with Java, the MERN Stack, Flutter, Firebase, MySQL, and REST APIs to build scalable and user-focused solutions. I enjoy developing web applications, designing efficient backend systems, and exploring AI technologies to solve real-world problems. With a strong foundation in Data Structures & Algorithms and hands-on project experience, I'm always eager to learn, innovate, and create impactful software.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-md justify-center md:justify-start">
+    <a href="#projects"
+   class="w-full sm:w-auto px-xl py-md bg-primary text-white rounded-xl font-semibold text-body-lg shadow-lg hover:shadow-xl transition-all cursor-pointer active:scale-95 inline-flex justify-center">
+    View Projects
+</a>
+
+</div>
+</div>
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="relative w-64 h-64 md:w-80 md:h-80">
+<div class="absolute inset-0 bg-primary-container rounded-3xl rotate-6 opacity-20"></div>
+<div class="absolute inset-0 bg-secondary-container rounded-3xl -rotate-3 opacity-20"></div>
+<img class="relative z-10 w-full h-full object-cover rounded-3xl ambient-shadow border-4 border-white" src="./images/profile.png" alt="Hemanth M"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="py-xl bg-surface-container-lowest" id="education">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-xl text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Education &amp; Growth</h2>
+<p class="text-on-surface-variant font-body-md max-w-xl mx-auto mt-sm">Building a strong theoretical and practical foundation for continuous growth and excellence.</p>
+</div>
+<div class="bg-white rounded-xl p-lg border border-outline-variant ambient-shadow max-w-4xl mx-auto flex flex-col md:flex-row gap-lg items-start">
+<div class="bg-primary-container/10 p-md rounded-xl">
+<span class="material-symbols-outlined text-primary text-[48px]">school</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-col md:flex-row md:items-start justify-between mb-sm">
+    
+    <div>
+        <h3 class="font-headline-lg text-headline-lg-mobile md:text-[24px] text-on-surface">
+            Bachelor of Computer Applications (Hons.)
+        </h3>
+
+        <h5 class="mt-2 text-[19px] font-semibold text-on-surface">
+            Specialization in Software Product Engineering
+        </h5>
+    </div>
+
+    <span class="font-label-md text-label-md text-primary bg-primary-fixed p-1 px-sm rounded-lg">2023 — 2027</span>
+
+</div>
+<p class="font-body-lg text-on-surface-variant mb-md">RV University | Kalvium • CGPA: 8.56/10.0</p>
+<div class="mt-md">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-sm">Relevant Coursework</h4>
+<div class="flex flex-wrap gap-sm">
+<span class="px-md py-1 bg-surface-container text-on-surface-variant rounded-full text-label-sm font-label-sm border border-outline-variant">Data Structures</span>
+<span class="px-md py-1 bg-surface-container text-on-surface-variant rounded-full text-label-sm font-label-sm border border-outline-variant">Algorithms</span>
+<span class="px-md py-1 bg-surface-container text-on-surface-variant rounded-full text-label-sm font-label-sm border border-outline-variant">Full-Stack Web Development</span>
+<span class="px-md py-1 bg-surface-container text-on-surface-variant rounded-full text-label-sm font-label-sm border border-outline-variant">DBMS</span>
+<span class="px-md py-1 bg-surface-container text-on-surface-variant rounded-full text-label-sm font-label-sm border border-outline-variant">OOP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Asymmetric Bento Grid) -->
+<section class="py-xl bg-surface" id="projects">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Projects</h2>
+<p class="text-on-surface-variant font-body-md mt-sm">Crafting functional experiences with modern technology.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Project 1 -->
+<div class="md:col-span-7 bg-white rounded-xl border border-outline-variant ambient-shadow overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek dark-themed coding environment on a laptop screen, showing a complex React application with clean syntax highlighting. The setting is a minimalist white desk with high-key lighting, creating a professional and focused software engineering vibe. The image uses a clean, light-mode surrounding aesthetic to emphasize the digital workspace within." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQwLRsAar2cEo79citOozaP2DpRIGJNkKUmKkmr8MreeFcsd_sgjYY-Wkn2dE66RuWVEfjxcxzYJKBjeyVFDgk-foCQdSL-_c6fjoTgXZTk8zJ_v0jJlgOokD7-Pc8ztTUHfHj2mTZnvwvWxwtxJZCrUgWR5GfUXvORacOmm1uXskEKf-sC4rwinsL4NT2FrSsr7BDox0njxUpcTNJ0JiGWzWTmnJBoKIU0sH5wWcQ2g0KXnO2c8BgqVTahhyhqrVk_GoWXjNPPX5"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm text-secondary font-label-sm text-label-sm">
+<span class="px-2 py-0.5 bg-secondary-container rounded">React</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">Node.js</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">MongoDB</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">Express.js</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">Postman</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">REST API</span>
+</div>
+<h3 class="font-headline-lg text-[24px] text-on-surface mb-sm">HealLink | Digital Health Assistance Platform</h3>
+<p class="font-body-md text-on-surface-variant mb-md">
+                                HealLink is a healthcare web application that helps users identify potential diseases based on their symptoms and access relevant health information. The platform provides home remedies, medication recommendations, and educational resources to support better health awareness. Designed with a user-friendly interface, it aims to make healthcare guidance more accessible and convenient.
+                            </p>
+<a href="https://github.com/kalviumcommunity/S48_Hemanth_Capstone_HealLink"
+   target="_blank"
+   class="inline-flex items-center gap-xs text-primary font-semibold hover:gap-sm transition-all">
+    View Github Repo
+    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-5 bg-white rounded-xl border border-outline-variant ambient-shadow overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern weather dashboard interface displayed on a tablet. The UI features elegant glassmorphism elements, vibrant teal and indigo icons, and clean data visualizations like temperature charts and humidity gauges. The tablet sits on a clean, light-colored wooden surface in a bright, airy room with soft morning sunlight casting gentle shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmy6mmrpgNsPBkwP4L5Nc3OmeAOKuFEwPERFh5QvGSRMgWl7D_W7_SKn6bPpl8JpS3TDzsw3D60lJjXBfmWYuq0HvTwQM9GrsbcRWBBofVlSKDM7CQpO80r6m_qX05xtYJRNlPFOMJZThgEdxe8otEpXCpmUhbq9XNBs5f7n_pazF9EiNp8K6QJKR-OkyyHyE_c6i8TqNcZJTWEepJeuns277Cru2nRGhd0t-xrDZyHzAgtzXXtnBnOq-rAHfVNXVMTAvpHN5abm3o"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm text-secondary font-label-sm text-label-sm">
+<span class="px-2 py-0.5 bg-secondary-container rounded">Java</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">JDBC</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">MySQL</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">OOP</span>
+<span class="px-2 py-0.5 bg-secondary-container rounded">Spring Boot</span>
+
+</div>
+<h3 class="font-headline-lg text-[24px] text-on-surface mb-sm">SkyReserve | Airline Reservation System</h3>
+<p class="font-body-md text-on-surface-variant mb-md">
+                                Airline Reservation System is a console-based application developed to manage flight bookings, cancellations, and passenger records efficiently. The system integrates Java with MySQL using JDBC to perform secure CRUD operations and maintain structured flight data. Built using Object-Oriented Programming principles, it features a modular design with optimized database interactions for reliable reservation management.
+                            </p>
+<a href="https://github.com/HemanthM18/Airline-Reservation-System/tree/main/airlinereservationsystem"
+   target="_blank"
+   class="inline-flex items-center gap-xs text-primary font-semibold hover:gap-sm transition-all">
+    View Github Repo
+    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-xl bg-surface-container-lowest" id="certifications">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-xl text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Professional Certifications</h2>
+<p class="text-on-surface-variant font-body-md max-w-xl mx-auto mt-sm">Demonstrating commitment to continuous learning and industry standards.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Cert Card 1 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant ambient-shadow flex flex-col gap-md hover:border-primary transition-all group">
+<div class="flex justify-between items-start">
+<div class="bg-primary-container/10 p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-1 rounded">2026</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-[18px] text-on-surface mb-1">JPMorgan Chase Software Engineering Job Simulation on Forage - January 2026</h3>
+<p class="font-body-md text-on-surface-variant">The Forage</p>
+</div>
+</div>
+<!-- Cert Card 2 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant ambient-shadow flex flex-col gap-md hover:border-primary transition-all group">
+<div class="flex justify-between items-start">
+<div class="bg-primary-container/10 p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-1 rounded">2026</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-[18px] text-on-surface mb-1">The Complete Full-Stack Web Development Bootcamp</h3>
+<p class="font-body-md text-on-surface-variant">Udemy, Inc.</p>
+</div>
+</div>
+<!-- Cert Card 3 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant ambient-shadow flex flex-col gap-md hover:border-primary transition-all group">
+<div class="flex justify-between items-start">
+<div class="bg-primary-container/10 p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-1 rounded">2026</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-[18px] text-on-surface mb-1">Google AI</h3>
+<p class="font-body-md text-on-surface-variant">Coursera</p>
+</div>
+</div>
+<!-- Cert Card 4 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant ambient-shadow flex flex-col gap-md hover:border-primary transition-all group">
+<div class="flex justify-between items-start">
+<div class="bg-primary-container/10 p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-1 rounded">2026</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-[18px] text-on-surface mb-1">AI Tools Workshop</h3>
+<p class="font-body-md text-on-surface-variant">be10x</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-xl bg-surface-bright" id="skills">
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-xl text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Technical Arsenal</h2>
+<p class="text-on-surface-variant font-body-md mt-sm">Tools and technologies I use to bring ideas to life.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg">
+<!-- Skill Card -->
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">code</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">Java</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[100%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Advanced</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">code</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">JavaScript</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[100%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Advanced</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">layers</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">HTML/CSS</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[100%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Advanced</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">hub</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">React.js</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[70%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Intermediate</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">terminal</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">MySQL</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[70%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Intermediate</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">code</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">C++</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[70%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Intermediate</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">terminal</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">Python</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[40%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Basic</span>
+</div>
+<div class="p-lg bg-white border border-outline-variant rounded-xl ambient-shadow flex flex-col items-center text-center hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-md group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[32px]">hub</span>
+</div>
+<h4 class="font-headline-lg text-[18px] text-on-surface mb-1">PHP</h4>
+<div class="w-full h-1 bg-surface-container mt-md rounded-full overflow-hidden">
+<div class="w-[40%] h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-sm">Basic</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl mb-xl">
+<div class="px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto">
+<div class="bg-primary rounded-3xl p-xl text-center text-white relative overflow-hidden shadow-xl">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute -top-1/2 -left-1/4 w-[500px] h-[500px] border-[40px] border-white rounded-full"></div>
+<div class="absolute -bottom-1/2 -right-1/4 w-[500px] h-[500px] border-[40px] border-white rounded-full"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-md">Looking for Jobs &amp; Internship Roles</h2>
+<p class="font-body-lg text-primary-fixed-dim mb-xl max-w-2xl mx-auto">
+                            I'm ready to bring my energy, technical skills, and problem-solving mindset to your team. Let's build something amazing together.
+                        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+<a href="https://drive.google.com/file/d/1RJXqO30142xENkP13is_ifdaEriIQT3w/view?usp=sharing"
+   target="_blank"
+   class="w-full sm:w-auto px-xl py-md bg-white text-primary rounded-xl font-bold text-body-lg hover:bg-surface-container-low transition-all shadow-lg active:scale-95">
+    Download Resume
+</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhemanth3131@gmail.com"
+   target="_blank"
+   class="w-full sm:w-auto px-xl py-md border-2 border-white text-white rounded-xl font-bold text-body-lg hover:bg-white/10 transition-all active:scale-95 flex items-center justify-center gap-sm">
+    <span class="material-symbols-outlined">mail</span>
+    Get in Touch
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center py-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full gap-md">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<div class="font-headline-lg text-primary">Hemanth M</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Software Developer • Full Stack Enthusiast • Lifelong Learner</p>
+</div>
+<div class="flex items-center gap-lg">
+<a class="text-on-surface-variant hover:text-secondary font-label-sm transition-colors" href="https://github.com/HemanthM18" target="_blank">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-sm transition-colors" href="https://www.linkedin.com/in/mhemanth-m/" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-sm transition-colors" href="https://www.instagram.com/_hemanth___m_/" target="_blank">Instagram</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mhemanth3131@gmail.com"
+   target="_blank"
+   class="text-on-surface-variant hover:text-secondary font-label-sm transition-colors">
+    Email
+</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>
